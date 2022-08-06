@@ -16,10 +16,10 @@ const addDateSuffix = date => {
     return dateString;
 };
 
-module.exports = {
+module.exports = (
     timestamp,
     { monthLength = 'short', dateSuffix = true } = {}
-} => {
+ ) => {
     let months;
     if (monthLength === 'short') {
         months = {
