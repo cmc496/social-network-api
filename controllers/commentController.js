@@ -1,4 +1,3 @@
-const res = require('express/lib/response');
 const { User, Comment } = require('../models');
 
 const commentController = {
@@ -40,20 +39,7 @@ const commentController = {
 
     createComment({ body }, res) {
         Comment.create(body)
-            .then(({ _id }) => {
-                return User.findOneAndUpdate(
-                    { _id: body.userId },
-                    { $push: { comments: _id } },
-                    { new: true}
-                );
-            })
-            .then(dbCommentData => {
-                if (!dbCommentData) {
-                    res.status(404).json({ message: 'No user found with that id' });
-                    return;
-                }
-                res.json(dbCommentData);
-            })
+            .then(( dbCommentData => res.json(dbCommentData)))
             .catch(err => res.json(err));
     },
 
@@ -76,18 +62,7 @@ const commentController = {
                     res.status(404).json({ message: 'No comment found with that id' });
                     return;
                 }
-                return User.findOneAndUpdate(
-                    { _id: params.userId },
-                    { $pull: { thoughts: params.id } },
-                    { new: true }
-                )
-            })
-            .then(dbUserData => {
-                if (!dbUserData) {
-                    res.status(404).json({ message: 'No user found with that id' });
-                    return;
-                }
-                res.json(dbUserData);
+                res.json(dbCommentdata);
             })
             .catch(err => res.json(err));
     },
@@ -102,7 +77,7 @@ const commentController = {
         .select('-_v')
         .then(dbCommentData => {
             if (!dbCommentData) {
-                res.status(404).json({ message: 'No thought with that id' });
+                res.status(404).json({ message: 'No comment found with that id' });
                 return;
             }
             res.json(dbCommentData);

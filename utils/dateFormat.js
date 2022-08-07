@@ -52,8 +52,8 @@ module.exports = (
             11: 'December'
         };
     }
-    const dateObj = new Date(this.timestamp);
-    const monthFormat = months[dateObj.getMonth];
+    const dateObj = new Date(timestamp);
+    const monthFormat = months[dateObj.getMonth()];
 
     let dayOfMonth;
 
@@ -63,7 +63,7 @@ module.exports = (
         dayOfMonth = dateObj.getDate();
     }
 
-    const year = dateObj.getFullYear;
+    const year = dateObj.getFullYear();
 
     let hour;
     if(dateObj.getHours > 12) {
@@ -74,7 +74,7 @@ module.exports = (
     if (hour === 0) {
         hour = 12;
     }
-    const min = dateObj.getMinutes();
+    const minutes = dateObj.getMinutes();
 
     let timeOfDay;
 
