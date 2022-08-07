@@ -3,7 +3,7 @@
 ## [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
 
 ## Description:
-This repo holds the code for API routes that form a social media site using MongoDB.
+This repo holds the code for API routes that form a backend social media site using MongoDB.
 
 ## Table of Contents:
 * [Technologies](#technologies)
@@ -30,9 +30,9 @@ This repo holds the code for API routes that form a social media site using Mong
 
 ## Video
 * [User Routes](https://user-images.githubusercontent.com/99096273/183270244-c68ff0be-5efe-4185-a408-0132eb6be7bb.mp4)
-* https://user-images.githubusercontent.com/99096273/183270246-5acad9fe-9a50-47d5-8b00-a2f580dffb58.mp4
-* https://user-images.githubusercontent.com/99096273/183270247-a2ffe882-389c-4a89-b939-07fc58ffc657.mp4
-* https://user-images.githubusercontent.com/99096273/183270256-29454447-8daf-4c1a-9ee4-4f5150cbd10a.mp4
+* [Comment Routes](https://user-images.githubusercontent.com/99096273/183270246-5acad9fe-9a50-47d5-8b00-a2f580dffb58.mp4)
+* [Reaction Routes](https://user-images.githubusercontent.com/99096273/183270247-a2ffe882-389c-4a89-b939-07fc58ffc657.mp4)
+* [Friend Routes](https://user-images.githubusercontent.com/99096273/183270256-29454447-8daf-4c1a-9ee4-4f5150cbd10a.mp4)
 
 ## Author
 * Caitlin Clifford
